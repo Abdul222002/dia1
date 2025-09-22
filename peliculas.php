@@ -1,9 +1,15 @@
 <?php
 
+
+
+// Crear conexión
+$conn = new mysqli('localhost', 'root', '', "pelis");
+
+var_dump($conn);
 class Peliculas {
-    public $titulo;
-    public $director;
-    public $anio;
+    private $titulo;
+    private $director;
+    private $anio;
 
     function __construct($titulo, $director, $anio) {
         $this->titulo = $titulo;
